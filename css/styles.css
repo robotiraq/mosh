@@ -14,6 +14,10 @@
   box-sizing: border-box;
 }
 /* Typography */
+::selection {
+  background: var(--color-primary);
+  color: white;
+}
 html {
   font-size: 62.5%;
 }
@@ -38,6 +42,7 @@ h2 {
 }
 h3 {
   font-size: 3rem;
+  font-weight: 500;
 }
 p {
   margin-top: 0;
@@ -114,7 +119,6 @@ a {
 .list {
   list-style: none;
   padding-left: 0;
-  color: var(--color-headings);
 }
 .list--inline .list__item {
   display: inline-block;
@@ -123,6 +127,7 @@ a {
 .list--tick {
   list-style-image: url(/images/tick.svg);
   padding-left: 3rem;
+  color: var(--color-headings);
 }
 .list--tick .list__item {
   padding-left: 0.5rem;
@@ -340,6 +345,7 @@ a {
 /* Media */
 .media {
   display: flex;
+  margin: 4rem 2rem 2rem;
 }
 .media__title {
   margin-top: 0rem;
@@ -504,16 +510,21 @@ a {
   background: #000;
   color: #7b858b;
 }
-.block--dark .block__heading {
+.block--dark .media__title,
+.block--dark .block__header {
   color: white;
 }
-.block--skewed--rigth {
+.block--dark .block__heading {
+  color: white;
+  padding-bottom: 2rem;
+}
+.block--skewed--right {
   padding-bottom: calc(var(--padding-vertical) + 4rem);
-  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 90%);
 }
 .block--skewed--left {
   padding-bottom: calc(var(--padding-vertical) + 4rem);
-  clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
 }
 .container {
   max-width: 1140px;
@@ -571,9 +582,6 @@ a {
   transform: translateY(5px);
 }
 /* Heros */
-.hero {
-  clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
-}
 .hero__image {
   width: 100%;
 }
@@ -650,5 +658,21 @@ a {
     /* we used the nth to select every even number and then we target the content of the container , we write
     order (2) so the first item shown in the grid is the 2nd item not the first ( which is the default)*/
     order: 2;
+  }
+}
+/* Showcase Block */
+.block-showcase__image > img {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .block-showcase .grid {
+    grid-template-columns: 50% 50%;
+  }
+  .block-showcase__image {
+    justify-self: end;
+  }
+  .block-showcase__image > img {
+    width: auto;
+    max-width: 700px;
   }
 }
