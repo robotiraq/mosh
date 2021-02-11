@@ -629,3 +629,26 @@ a {
   max-width: 500px;
   margin: 0 auto;
 }
+/* Features */
+.feature {
+  gap: 4rem 2rem;
+  margin: 12rem 0;
+}
+.feature:first-of-type {
+  margin: 6rem 0;
+}
+.features__image {
+  width: 100%;
+}
+
+.feature__heading {
+  margin: 1rem 0;
+}
+
+@media screen and (min-width: 768px) {
+  .feature:nth-of-type(even) .feature_content {
+    /* we used the nth to select every even number and then we target the content of the container , we write
+    order (2) so the first item shown in the grid is the 2nd item not the first ( which is the default)*/
+    order: 2;
+  }
+}
