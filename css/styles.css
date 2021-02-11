@@ -209,6 +209,10 @@ a {
   width: 100%;
   display: inline-block;
 }
+.plan--popular .btn--outline {
+  background: var(--color-headings);
+  color: white;
+}
 .btn--outline {
   background: white;
   color: var(--color-headings);
@@ -271,6 +275,10 @@ a {
   color: white;
 }
 /* Plans */
+.plan {
+  transition: transform 0.3s;
+}
+
 .plan__name {
   color: white;
   margin: 0;
@@ -295,6 +303,9 @@ a {
 .plan .list__item {
   margin-bottom: 2rem;
 }
+.plan--popular {
+  transform: scale(1.1);
+}
 .plan--popular .card__header {
   position: relative;
 }
@@ -306,7 +317,12 @@ a {
   top: -6px;
   right: 5%;
 }
-
+.plan:hover {
+  transform: scale(1.05);
+}
+.plan--popular:hover {
+  transform: scale(1.15);
+}
 @media screen and (min-width: 1024px) {
   .plan__name {
     font-size: 1.4rem;
@@ -603,4 +619,13 @@ a {
     col numbers , so more items mean more grid cols ,
      we used the minmax to give a min width for the single grid and a max width if there is availbe space */
   }
+}
+/* Plans block */
+
+.block-plans .grid {
+  gap: 8rem 4rem;
+}
+.block-plans .card {
+  max-width: 500px;
+  margin: 0 auto;
 }
