@@ -25,7 +25,7 @@ html {
 body {
   font-family: Inter, Arial, Helvetica, sans-serif;
   color: var(--color-body);
-  font-size: 2.4rem;
+  font-size: 2rem;
   line-height: 1.5;
 }
 h1,
@@ -36,13 +36,13 @@ h3 {
   line-height: 1.1; /* the line height dont take w7dat it only take value*/
 }
 h1 {
-  font-size: 7rem;
-}
-h2 {
   font-size: 4rem;
 }
-h3 {
+h2 {
   font-size: 3rem;
+}
+h3 {
+  font-size: 2.5rem;
   font-weight: 500;
 }
 p {
@@ -91,7 +91,7 @@ a {
 /* Badges */
 .badge {
   border-radius: 20px;
-  font-size: 2rem;
+  font-size: 1rem;
   font-weight: 600;
   padding: 0.5rem 2rem;
   white-space: nowrap;
@@ -105,7 +105,7 @@ a {
   color: white;
 }
 .badge--small {
-  font-size: 1.6rem;
+  font-size: 0.5rem;
   padding: 0.5rem 1rem;
 }
 @media screen and (min-width: 1024px) {
@@ -148,6 +148,10 @@ a {
   width: 30px;
   height: 30px;
 }
+.icon--smaller {
+  width: 20px;
+  height: 20px;
+}
 .icon--primary {
   fill: var(--color-primary);
 }
@@ -163,6 +167,10 @@ a {
   height: 64px;
   border-radius: 100%;
 }
+.icon-container--small {
+  width: 42px;
+  height: 42px;
+}
 .icon-container--accent {
   background: var(--color-accent);
 }
@@ -171,15 +179,16 @@ a {
   border-radius: 40px;
   border: 0;
   cursor: pointer;
-  font-size: 1.8rem;
+  font-size: 1rem;
   font-weight: 600;
-  padding: 2rem 3rem;
+  padding: 2rem 3vw;
   text-transform: uppercase;
   white-space: nowrap;
   text-align: center;
   margin: 1rem 0;
   outline: 0;
 }
+
 .btn .icon {
   width: 2rem;
   height: 2rem;
@@ -231,6 +240,7 @@ a {
 @media screen and (min-width: 1024px) {
   .btn {
     font-size: 1.5rem;
+    padding: 2rem 1vh;
   }
 }
 /* Inputs */
@@ -239,7 +249,7 @@ a {
   outline: 0;
   border-radius: var(--border-radius);
   color: var(--color-headings);
-  font-size: 2rem;
+  font-size: 1rem;
 }
 ::placeholder {
   color: #cdcbc7;
@@ -253,6 +263,7 @@ a {
   border: 0;
   flex-grow: 1;
   padding: 1.5rem 2rem;
+  width: 0;
 }
 .input-group .btn {
   margin: 4px;
@@ -270,7 +281,8 @@ a {
 }
 .card__header,
 .card__body {
-  padding: 2rem 3rem;
+  padding: 2rem 1rem;
+  font-size: 2rem;
 }
 .card--primary .card__header {
   background: var(--color-primary);
@@ -292,7 +304,7 @@ a {
   font-size: 2.4rem;
 }
 .plan__price {
-  font-size: 6rem;
+  font-size: 4rem;
 }
 .plan__billing-cycle {
   font-size: 2.4rem;
@@ -301,7 +313,7 @@ a {
   margin-right: 1rem;
 }
 .plan__description {
-  font-size: 2rem;
+  font-size: 1.7rem;
   font-weight: 300;
   letter-spacing: 1px;
   display: block;
@@ -359,7 +371,7 @@ a {
 }
 /* Quotes */
 .quote {
-  font-size: 3rem;
+  font-size: 1.5rem;
   font-style: italic;
   color: var(--color-body-darker);
   line-height: 1.3;
@@ -371,14 +383,14 @@ a {
   content: close-quote;
 }
 .quote__author {
-  font-size: 3rem;
+  font-size: 1.5rem;
   font-weight: 500;
   font-style: normal;
   margin-bottom: 0;
 }
 .quote__company {
   color: var(--color-headings);
-  font-size: 2rem;
+  font-size: 1rem;
   font-weight: 300;
   font-style: normal;
   opacity: 0.4;
@@ -415,10 +427,11 @@ a {
 }
 /* Testimonials */
 .testimonial {
-  padding: 3rem;
+  padding: auto;
 }
 .testimonial__image {
   position: relative;
+  padding: 2rem 3rem;
 }
 .testimonial__image > img {
   width: 100%;
@@ -426,7 +439,7 @@ a {
 .testimonial__image > .icon-container {
   position: absolute;
   top: 3rem;
-  right: -32px;
+  right: 0px;
 }
 @media screen and (min-width: 768px) {
   .testimonial .quote,
@@ -435,6 +448,11 @@ a {
   }
   .testimonial .quote {
     padding-left: 4rem;
+  }
+  .testimonial__image > .icon-container {
+    position: absolute;
+    top: 6rem;
+    right: 0px;
   }
 }
 /* Callouts */
@@ -449,7 +467,7 @@ a {
 .callout__heading {
   color: white;
   margin-top: 0;
-  font-size: 3rem;
+  font-size: 1.5rem;
 }
 .callout .btn {
   justify-self: center;
@@ -477,7 +495,7 @@ a {
 }
 .collapsible__heading {
   margin-top: 0;
-  font-size: 3rem;
+  font-size: 1.5rem;
 }
 .collapsible__chevron {
   transform: rotate(-90deg);
@@ -512,7 +530,6 @@ a {
   background: #000;
   color: #7b858b;
 }
-
 .block--dark .media__title,
 .block--dark h1,
 .block--dark h2,
@@ -525,7 +542,7 @@ a {
 }
 .block--skewed--right {
   padding-bottom: calc(var(--padding-vertical) + 4rem);
-  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 90%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 95%);
 }
 .block--skewed--left {
   padding-bottom: calc(var(--padding-vertical) + 4rem);
@@ -575,7 +592,7 @@ a {
   .nav__list {
     width: auto;
     display: flex;
-    font-size: 1.6rem;
+    font-size: 2rem;
     max-height: 100%;
     opacity: 1;
   }
@@ -615,13 +632,14 @@ a {
 }
 .block-domain__prices {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 6rem);
-  font-size: 2rem;
+  font-size: 1rem;
   font-weight: 600;
   justify-items: center;
   max-width: 700px;
   margin: 0 auto;
+  color: var(--color-headings);
 }
 @media screen and (min-width: 768px) {
   .block-domain__prices {
@@ -712,7 +730,7 @@ a {
   max-width: 200px;
 }
 .footer_copyright {
-  font-size: 2.1rem;
+  font-size: 1rem;
   color: white;
   opacity: 0.3;
 }
